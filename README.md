@@ -1,7 +1,7 @@
 forecast
 ========
 
-A mashup using the Forecast.io and a background image based on a predetermined geolocation.
+A simple use of the Forecast.io API combined with an associated background image based on a predetermined geolocation.
 
 Replace your own forecast.io API key and lat,long desired location in the API call. Also replace whatever image names and commentary you'd like to associate. There is also an ability to attribute the image used.
 
