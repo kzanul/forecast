@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>  
+<script type="text/javascript" src="forecast.js"></script>  
+
+<style>
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+#display-container { 
+  min-height: 496px;
+  background-color: #FFF;
+}
+
+#map-wrapper {
+    width: 100%;
+    min-height: 650px;
+  float: none;
+  background-color: #423A38;
+  background-size: cover;
+}
+
+ #pane {
+width: 100%;
+position: relative;
+z-index: 500;
+  }
+
+#panes-status {
+  font-family: 'helvetica-condensed', Helvetica, Arial; 
+  color: #FFF;    
+  padding-top:100px;
+  margin-left:20px;
+  width: 50%;
+  float: left;
+  position:relative;
+  background-color: rgba(0, 0, 0, .7);
+
+  }
+  #panes-status-weather {
+  
+  padding-left: 10px;
+  }
+
+#panes-status-fuel {
+   font-family: 'helvetica-condensed', Helvetica, Arial;  
+  color: #47B8C8; 
+  font-size: 1.5em;
+  padding-left: 10px;
+  }
+
+
+</style>
+</head>
+<body>
+
+  <div id="display-container" class="clearfix">
+    <div id="map-wrapper">
+      
+
+  <div id="panes-status">
+    <div id="panes-status-weather"></div>
+    <div id="panes-status-fuel"></div>
+    <br>
+    <br>
+  </div>
+
+
+</div>
+</div>
+</body>
+</html>
