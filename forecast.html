@@ -1,27 +1,66 @@
 <!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <html class="">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>  
-<script type="text/javascript" src="forecast.js"></script>  
+<script type="text/javascript" src="forecast2.js"></script>  
+ <script src="../../js/foundation/modernizr.foundation.js"></script>
+
+ <link rel="stylesheet" href="../../foundation-icons.css">
+  <link rel="stylesheet" href="../../css/app.css">
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:800italic,400' rel='stylesheet' type='text/css'>
+
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33627988-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 <style>
+
+body {
+  margin: 0 0 0 0;
+}
+
+#creative {
+  color: white;
+}
+  .scroll {
+  overflow: visible;
+}
+
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
+
 #display-container { 
   min-height: 496px;
-  background-color: #FFF;
+  background-color: #000;
 }
 
 #map-wrapper {
-    width: 100%;
-    min-height: 650px;
-  float: none;
-  background-color: #423A38;
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+
+
+  
+
+
 }
 
  #pane {
@@ -31,39 +70,181 @@ z-index: 500;
   }
 
 #panes-status {
-  font-family: 'helvetica-condensed', Helvetica, Arial; 
+  font-family: 'Open Sans', sans-serif;
   color: #FFF;    
-  padding-top:100px;
-  margin-left:20px;
-  width: 50%;
-  float: left;
-  position:relative;
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-color: rgba(0, 0, 0, .7);
+  padding-left: 5%;
+  padding-top: 5%;
+
+  }
+
+  #panes-status h1{
+  font-size: 92px;
 
   }
   #panes-status-weather {
-  
-  padding-left: 10px;
+  width: 50%;
+  margin-top: 10%;
+
   }
 
+  #panes-status-weather h1 {
+color: white;
+padding-top: 15px;
+font-size: 60px;
+  }
+
+
 #panes-status-fuel {
+  width: 30%;
    font-family: 'helvetica-condensed', Helvetica, Arial;  
   color: #47B8C8; 
   font-size: 1.5em;
-  padding-left: 10px;
+
   }
+
+@media screen and (max-width: 1800px){
+#map-wrapper {
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  
+
+}
+
+
+
+#panes-status {
+
+   font-family: 'Open Sans', sans-serif;
+  color: #FFF;    
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, .7);
+  padding-left: 5%;
+  padding-top: 5%;
+
+
+  }
+
+  #panes-status h1 {
+    font-size: 60px;
+
+  }
+  #panes-status-weather {
+  width: 50%;
+  margin-top: 10%;
+
+  }
+
+  #panes-status-weather h1 {
+color: white;
+padding-top: 15px;
+font-size: 40px;
+
+  }
+
+
+#panes-status-fuel {
+  width: 30%;
+   font-family: 'helvetica-condensed', Helvetica, Arial;  
+  color: #47B8C8; 
+  font-size: 1.3em;
+  margin-bottom: 30%;
+
+  }
+
+  .scroll {
+  overflow: visible;
+}
+
+
+@media screen and (max-width: 768px){
+#map-wrapper {
+   min-height: 800px;
+  min-width: 100%;
+  width: 100%;
+  height: auto;
+    position: relative;
+  top: 0;
+  left: 0;
+
+  float: none;
+  background-color: #423A38;
+
+}
+
+
+
+#panes-status {
+    font-family: 'Open Sans', sans-serif;
+  color: #FFF;    
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, .7);
+  padding-left: 5%;
+  padding-top: 5%;
+
+  }
+
+  #panes-status h1 {
+    font-size: 48px;
+
+  }
+  #panes-status-weather {
+  width: 50%;
+  margin-top: 10%;
+
+  }
+
+  #panes-status-weather h1 {
+color: white;
+padding-top: 15px;
+font-size: 30px;
+
+  }
+
+
+#panes-status-fuel {
+  width: 30%;
+   font-family: 'helvetica-condensed', Helvetica, Arial;  
+  color: #47B8C8; 
+  font-size: 1em;
+  margin-bottom: 30%;
+
+  }
+
+  .scroll {
+  overflow: visible;
+}
 
 
 </style>
 </head>
 <body>
 
-  <div id="display-container" class="clearfix">
     <div id="map-wrapper">
-      
 
   <div id="panes-status">
-    <div id="panes-status-weather"></div>
+    
+      <H1 style="font-weight:800; color: white; line-height: 90%; text-shadow: 2px 2px  #0000FF;"><i>TORONTO PHOTOCAST</i></H1>
+    <div id="panes-status-weather">
+  
+    </div>
     <div id="panes-status-fuel"></div>
     <br>
     <br>
@@ -71,6 +252,9 @@ z-index: 500;
 
 
 </div>
-</div>
+
+
+
+
 </body>
 </html>
